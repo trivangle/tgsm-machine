@@ -1,0 +1,208 @@
+
+<!doctype html>
+<html lang="en" data-theme="auto">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Triangle Geometric Semantic Model (TGSM) — Demo & Guided Examples</title>
+  <meta name="description" content="TGSM helps you act with greater clarity. Reveals directional energy, exposes regime shifts and hidden risks, confirms stability—across multiple time scales. Explore the interactive demo with built-in examples." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#0d1b2a">
+  <meta property="og:title" content="Triangle Geometric Semantic Model (TGSM)" />
+  <meta property="og:description" content="Clarity-first Explainable AI: see directional energy, risk build-up, stability confirmation, and regime shifts across time scales." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/og-image.png" />
+  <style>
+    :root { --ink:#1f2937; --bg:#fff; --muted:#6b7280; --surface:#f8f9fa; --surface-alt:#f1f1f1; --brand:#0d1b2a; --accent:#0077b6; --accent-dark:#023e8a; --border:#e5e7eb; }
+    [data-theme="dark"] { --ink:#e5e7eb; --bg:#0b1320; --muted:#94a3b8; --surface:#121826; --surface-alt:#0e1726; --brand:#0b1320; --accent:#54b6ff; --accent-dark:#2f8fd6; --border:#243447; }
+    html, body { margin:0; padding:0; background:var(--bg); color:var(--ink); font-family: "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif; line-height:1.6; }
+    .container { width:90%; max-width:1200px; margin:0 auto; padding:20px; }
+    .site-header { background:var(--brand); color:#fff; }
+    .header-grid { display:flex; align-items:center; justify-content:space-between; gap:.75rem; }
+    .logo { color:#fff; text-decoration:none; font-weight:700; font-size:1.15rem; letter-spacing:.02em; }
+    .nav a { color:#fff; text-decoration:none; margin-left:16px; font-weight:600; }
+    .nav a:hover { text-decoration:underline; }
+    .theme-toggle button { background:transparent; color:#fff; border:1px solid rgba(255,255,255,.3); border-radius:6px; padding:6px 10px; cursor:pointer; font-weight:600; }
+    .hero { background:var(--surface); }
+    .hero-grid { display:grid; gap:1.5rem; grid-template-columns:1fr; }
+    @media (min-width:900px){ .hero-grid { grid-template-columns: 1.2fr .8fr; } }
+    .hero-copy h1 { font-size:2.4rem; line-height:1.2; margin:0 0 14px; }
+    .lead { font-size:1.1rem; margin:0 0 18px; }
+    .cta-group a { display:inline-block; margin:6px 8px 12px 0; padding:10px 16px; background:var(--accent); color:#fff; text-decoration:none; border-radius:6px; font-weight:700; }
+    .cta-group a:hover { background:var(--accent-dark); }
+    .hero-points { margin:8px 0 0; padding-left:18px; }
+    .hero-media { display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:center; padding:8px; }
+    .section { padding:42px 0; }
+    .section.alt { background:var(--surface-alt); }
+    .cards { display:grid; gap:16px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .card { background:var(--bg); border:1px solid var(--border); border-radius:8px; padding:14px; box-shadow:0 2px 6px rgba(0,0,0,.06); }
+    .site-footer { background:var(--brand); color:#fff; }
+    .footer-grid { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:.75rem; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-grid" role="navigation" aria-label="Main">
+      <a href="./" class="logo" aria-label="Home">TGSM</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#insights">Insights</a>
+        <a href="#examples">Guided examples</a>
+        <a href="#concept">Concept</a>
+        <a href="resources/">Resources</a>  
+        <a href="#contact">Contact</a>
+        <a href="demo" target="_blank" rel="noopener">Open demo ↗</a>
+      </nav>
+      <div class="theme-toggle" aria-label="Theme">
+        <button id="toggleTheme" type="button">Theme: auto</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero visuals -->
+  <section id="insights" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h1>Triangle Geometric Semantic Model (TGSM)</h1>
+        <p class="lead">Helps you act with greater clarity. Reveals directional energy, exposes regime shifts and hidden risks, confirms stability—all across multiple time scales. Explore the interactive demo with built-in examples.</p>
+        <div class="cta-group">
+          <a href="demo" target="_blank" rel="noopener">Explore the demo</a>
+          <a href="#examples">See guided examples</a>
+        </div>
+        <ul class="hero-points">
+          <li>See where risk concentrates and how it moves.</li>
+          <li>Confirm stability through persistence, not smoothing.</li>
+          <li>Detect regime shifts and directional changes early.</li>
+          <li>Reduce noise without losing structural meaning.</li>
+          <li>Keep clarity intact across scales and conditions.</li>
+        </ul>
+      </div>
+      <div class="hero-media" aria-hidden="true">
+        <!-- Giant Triangles -->
+        <svg width="140" height="100" viewBox="0 0 140 100" role="img" aria-label="Directional energy dominance">
+          <defs>
+            <linearGradient id="triDominant" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#54b6ff"/>
+              <stop offset="1" stop-color="#2f8fd6"/>
+            </linearGradient>
+            <linearGradient id="triSecondary" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#a8b5c7"/>
+              <stop offset="1" stop-color="#7e8da3"/>
+            </linearGradient>
+          </defs>
+          <line x1="10" y1="90" x2="130" y2="90" stroke="#94a3b8" stroke-width="2" />
+          <polygon points="20,90 90,90 90,35" fill="url(#triDominant)" opacity="0.95"/>
+          <polygon points="50,90 120,90 120,55" fill="url(#triSecondary)" opacity="0.85"/>
+        </svg>
+        <!-- Violin silhouette -->
+        <svg width="140" height="100" viewBox="0 0 140 100" role="img" aria-label="Hidden risk distribution">
+          <path d="M70 10 C 95 10, 110 30, 110 50 C 110 70, 95 90, 70 90 C 45 90, 30 70, 30 50 C 30 30, 45 10, 70 10 Z" fill="#0077b6" opacity="0.15" />
+          <path d="M30 50 C 45 35, 95 35, 110 50 C 95 65, 45 65, 30 50 Z" fill="#0077b6" opacity="0.30" />
+        </svg>
+        <!-- Stacked Bars -->
+        <svg width="160" height="100" viewBox="0 0 160 100" role="img" aria-label="Stacked events per period">
+          <g fill="#0077b6" opacity="0.85">
+            <rect x="15" y="60" width="24" height="25" rx="2"/>
+            <rect x="15" y="40" width="24" height="18" rx="2" opacity="0.6"/>
+          </g>
+          <g fill="#2f8fd6" opacity="0.85">
+            <rect x="49" y="45" width="24" height="40" rx="2"/>
+            <rect x="49" y="28" width="24" height="15" rx="2" opacity="0.6"/>
+          </g>
+          <g fill="#54b6ff" opacity="0.85">
+            <rect x="83" y="50" width="24" height="35" rx="2"/>
+            <rect x="83" y="20" width="24" height="25" rx="2" opacity="0.6"/>
+          </g>
+          <g fill="#7e8da3" opacity="0.85">
+            <rect x="117" y="62" width="24" height="23" rx="2"/>
+            <rect x="117" y="35" width="24" height="24" rx="2" opacity="0.6"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guided Examples -->
+  <section id="examples" class="section alt">
+    <div class="container">
+      <h2>Guided Examples</h2>
+      <p>Explore built-in test data directly inside the demo—no downloads required.</p>
+      <div class="cards">
+        <article class="card">
+          <h3>Directional Energy & Dominance</h3>
+          <p>See how directional energy accumulates and where dominance shifts across the window. Stability is confirmed through persistence—not smoothing.</p>
+          <a href="demo" target="_blank" rel="noopener">Open in demo</a>
+        </article>
+        <article class="card">
+          <h3>Risk Build‑up & Stability</h3>
+          <p>Risk position and direction of change come into focus—see when pressure accelerates or reduces and when stability holds.</p>
+          <a href="demo" target="_blank" rel="noopener">Open in demo</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Concept (single paragraph, no jargon second paragraph) -->
+  <section id="concept" class="section">
+    <div class="container">
+      <h2>Concept Summary</h2>
+      <p>TGSM organizes systemic movement into structural energy layers and persistence signals, showing where risk concentrates, when stability is genuine, and how patterns evolve across windows and scales. It interprets directional energy and regime shifts as changes in risk position and momentum—whether accelerating, reducing, or holding steady. The focus is clarity—trustable signals, decisions you can explain at a glance, and confidence that scales across conditions and time horizons.</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section alt">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Bring clarity to your domain—markets, flood risk, infrastructure. Reduce loss, improve timing, and make decisions you can defend and rely on.</p>
+      <ul>
+        <li>Email: <a href="mailto:contact@example.com">contact@example.com</a></li>
+        <li>Scheduling: <a href="contact#book">Book a conversation</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>TGSM</strong> — Triangle Geometric Semantic Model
+        <p class="muted">© <span id="year"></span> Clarivus Research. All rights reserved.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Legal">
+        <a href="resources/">Resources</a>
+        <a href="privacy">Privacy</a>
+        <a href="terms">Terms</a>
+      </nav>
+    </div>
+  </footer>
+
+  
+
+<script>
+  (function () {
+    const navRes = document.querySelector('nav.nav a[href="resources/"]');
+    if (navRes) {
+      navRes.setAttribute('aria-disabled', 'true');
+      navRes.setAttribute('title', 'Coming soon');
+      navRes.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }, { passive: false });
+    }
+  }());
+</script>
+
+
+
+
+ <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const root = document.documentElement; const key = 'tgsm-theme';
+    function applyTheme(m){ root.setAttribute('data-theme', (m==='light'||m==='dark')?m:'auto'); }
+    const saved = localStorage.getItem(key); applyTheme(saved||'auto');
+    const btn = document.getElementById('toggleTheme');
+    if(btn){ const cur = root.getAttribute('data-theme'); btn.textContent = 'Theme: '+cur; btn.addEventListener('click',()=>{ const c=root.getAttribute('data-theme'); const n=c==='dark'?'light':(c==='light'?'auto':'dark'); applyTheme(n); localStorage.setItem(key,n); btn.textContent='Theme: '+n; }); }
+  </script>
+</body>
+</html>
